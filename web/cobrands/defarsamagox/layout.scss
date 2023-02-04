@@ -1,2 +1,29 @@
 @import "_colours";
 @import "../sass/layout";
+
+.nav-menu--main {
+
+    a:hover {
+        color: $nav_hover_colour;
+        background-color: $nav_hover_background_colour;
+    }
+
+    a.report-a-problem-btn {
+        color: $primary_text_y;
+        background-color: $primary;
+
+        &:hover {
+            background-color: $primary/1.1;
+        }
+    }
+
+    span {
+        color: $nav_hover_colour;
+        background-color: $nav_hover_background_colour;
+    }
+
+    span.report-a-problem-btn:hover {
+        background-color: transparent;
+        color: $primary;
+    }
+}

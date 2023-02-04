@@ -11,13 +11,16 @@ $bluey: #eee;
 $primary: $orange;
 $primary_b: #000000;
 $primary_text: #222222;
+$primary_text_r: #e31b23;
+$primary_text_y: #fdef42;
 
 $base_bg: $bluey;
 $base_fg: #000;
 
 $nav_background_colour: $bluey;
-$nav_colour: #000;
+$nav_colour: $orange;
 $nav_hover_background_colour: $primary;
+$nav_hover_colour: #fff;
 
 // Colour used for front page 'how to report a problem' steps
 $col_big_numbers: #ccc;
