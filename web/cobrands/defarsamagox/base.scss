@@ -4,3 +4,6 @@
 
 @import "../sass/base";
 
+#site-logo {
+    @include svg-background-image("images/site-logo");
+}
