@@ -1,36 +1,32 @@
-[%
-    SET html_att = ' lang="' _ lang_code _ '"';
-    # For a right-to-left language, use the following line in your own header:
-    # SET html_att = html_att _ ' dir="rtl"';
--%]
-<!doctype html>
-<!--[if IE 8]>   <html class="no-js ie8"[% html_att | safe %]><![endif]-->
-<!--[if IE 9]>   <html class="no-js ie9"[% html_att | safe %]><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js"[% html_att | safe %]><!--<![endif]-->
-    <head>
-        <meta name="viewport" content="initial-scale=1.0">
-
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <meta name="HandHeldFriendly" content="true">
-        <meta name="mobileoptimized" content="0">
-
-        [% INCLUDE 'header_opengraph.html' %]
-        [% INCLUDE 'header/css.html' %]
-        [% INCLUDE 'common_header_tags.html' %]
-        [% TRY %][% PROCESS 'header_extra.html' %][% CATCH file %][% END %]
-
-    </head>
-    [% TRY %][% PROCESS 'set_body_class.html' %][% CATCH file %][% END %]
-    <body class="[% bodyclass | html IF bodyclass %]">
-
-    [% INCLUDE 'debug_header.html' %]
-    [% TRY %][% PROCESS 'before_wrapper.html' %][% CATCH file %][% END %]
-
-    <div class="wrapper">
-        <div class="table-cell">
-            [% INCLUDE 'header_site.html' %]
-
-            [% pre_container_extra | safe %]
-
-            <div class="container">
-                <div class="content[% " $mainclass" | html IF mainclass %]" role="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - Ville de Dakar</title>
+    <script src="https://kit.fontawesome.com/5786bcee1e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://villededakar.sn/wp-content/uploads/2020/12/logo-ville-H.png" alt="Ville de Dakar" class="desk-logo d-none d-lg-block d-xl-block" style="width:200px ; height:auto" />
+        </div>
+        <nav>
+            <ul>
+                <li class="seach"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></li>
+                <li><a href="https://villededakar.sn/">Accueil</a></li>
+                <li><a href="https://villededakar.sn/articles-recents/">Actualité</a></li>
+                <li><a href="https://villededakar.sn/historiques-de-dakar/">Découvrir Dakar</a></li>
+                <li><a href="https://villededakar.sn/le-maire/">La mairie</a></li>
+                <li><a href="https://villededakar.sn/dei/demande-de-bourse/">E-Services</a></li>
+                <li><a href="https://villededakar.sn/contact/">Contact</a></li>
+            </ul>
+        </nav>    
+    </header>    
+</body>
+</html>
