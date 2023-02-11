@@ -1,41 +1,81 @@
 @import "_colours";
 @import "../sass/layout";
 
-    header {
-    display: flex;
+.nav-menu--main {
+
+    a:hover {
+        color: $nav_hover_colour;
+        background-color: $nav_hover_background_colour;
+    }
+
+    a.report-a-problem-btn {
+        color: $primary_text_y;
+        background-color: $primary;
+
+        &:hover {
+            background-color: $primary/1.1;
+        }
+    }
+
+    span {
+        color: $nav_hover_colour;
+        background-color: $nav_hover_background_colour;
+    }
+
+    span.report-a-problem-btn:hover {
+        background-color: transparent;
+        color: $primary;
+    }
+}
+
+#front-main {
+    color: $primary_text_b;
+
+    .form-hint {
+        color: $yellow;
+    }
+
+    a {
+        color: $primary_text_r;
+
+        &:hover {
+            color: $primary_link_hover_color;
+        }
+    }
+}
+
+footer {
+    background-color: $bluey;
+    overflow: hidden;
+    height: auto;
+
+    h3 {
+        color: $orange;
+        margin-bottom: 3%;
+        font-size: 14px;
+    }
+
+    p {
+        color: $primary_b;
+        font-size: 14px;
+    }
+
+    .p2 {
+        font-weight: 400;
+        color: $primary_text;
+        font-size: 14px;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-rows: 1fr 0fr;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 260px);
+    width: 90%;
+    padding: 2%;
+    margin: 0 auto !important;
+    text-justify: auto;
+    line-height: 1.75;
     justify-content: space-between;
-    padding: 20px;
 }
-
-header nav ul {
-    display: flex;
-    padding: 0px 120px;
-    list-style-type: none;
-    margin: 0;
-}
-
-header nav ul li {
-    padding: 10px 5px;
-    margin: 0px 20px 0px 20px;
-}
-
-header nav ul li a {
-    font-family:"Cabin", Sans-serif;
-    font-size:17px;
-    font-weight:400;
-    color: #202B5D;
-    text-decoration: none;
-}
-
-header nav ul li:hover a {
-    color: #FF3514;
-}
-
-
-.seach {
-    font-size:14px;
-    font-size: 20px;
-    color: #202B5D;
-    margin: 0px 0px 0px 20px;
-}
-
